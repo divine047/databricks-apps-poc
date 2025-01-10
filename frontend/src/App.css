@@ -1,0 +1,231 @@
+/* src/App.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  display: flex;
+}
+
+.navbar {
+  width: 250px; /* Fixed width for the navbar */
+  background-color: #f4f4f4;
+  padding: 10px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  min-height: calc(100vh - 64px); /* Ensure full-height navbar */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: fixed; /* Fix the navbar on the left side */
+  top: 64px; /* Adjust for the header height */
+}
+
+.navbar a {
+  display: block;
+  margin: 10px 0;
+  color: #333;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for navbar links */
+.navbar a:hover {
+  background-color: #007bff; /* Blue background color */
+  color: white; /* Change text color to white */
+}
+
+/* Active link style */
+.navbar .active {
+  font-weight: bold;
+  color: #007bff; /* Highlight active link */
+}
+
+/* Content Area */
+.page-content {
+  flex-grow: 1;
+  margin-left: 250px; /* Adjust the left margin to the fixed navbar width */
+  padding: 20px;
+  margin-top: 3rem; /* Adjust the top margin for the header */
+  min-height: calc(100vh - 64px); /* Ensure content area is full height */
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.header-left {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-right span {
+  margin-right: 10px;
+}
+
+.theme-toggle-btn {
+  padding: 5px 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Profile Card */
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  margin-top: 20px;
+  transition: box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.profile-card .header {
+  display: flex;
+  align-items: center;
+}
+
+.profile-card .header img {
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.profile-card .employee-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-card .employee-info span {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.profile-card .employee-info .name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Past Assessments Card */
+.past-assessments-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  transition: box-shadow 0.3s ease;
+}
+
+.past-assessments-card:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.past-assessments-card .title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.past-assessments-card .cycle, .past-assessments-card .self-reflection {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.past-assessments-card button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.past-assessments-card button:hover {
+  background-color: #0056b3;
+}
+
+/* Dropdown Styles */
+.navbar-dropdown {
+  background-color: #fff;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 200px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  display: none;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+  z-index: 20;
+}
+
+.navbar-dropdown.show {
+  display: block;
+  opacity: 1;
+}
+
+.navbar-dropdown a {
+  color: #333;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+}
+
+.navbar-dropdown a:hover {
+  background-color: #f1f1f1;
+  color: #007bff;
+}
+
+/* Profile Card and Other Sections Styling */
+.profile-card {
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.profile-card .header {
+  margin-bottom: 20px;
+}
